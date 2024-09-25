@@ -9,9 +9,9 @@ Poc de WEB - Media Queries
 
  <!--ts-->
  
- * [Print - apenas impressão](#Print - apenas impressão)
- * [Larguras de dispositivos diferentes](#Larguras de dispositivos diferentes)
- * [Disposição dos dispositivos](#Disposição dos dispositivos)
+ * [Print - apenas impressão](#Print)
+ * [Larguras de dispositivos diferentes](#Larguras)
+ * [Disposição dos dispositivos](#Disposição)
  
  <!--te-->
 
