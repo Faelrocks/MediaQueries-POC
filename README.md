@@ -48,7 +48,7 @@ const updateMyVehicle = {
 
 const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
  ~~~~
- ## Larguras de dispositivos diferentes
+ ## Larguras
  O método MAP no javascript consegue executar uma funcão diretamente para cada elemento do array
 
  Por exemplo, imagine que desejamos retornar a raiz quadrada dos números abaixo:
@@ -61,7 +61,7 @@ const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
  // raizQuadrada = [2, 3, 4, 5]
  ~~~~
 
- ## Disposição dos dispositivos
+ ## Disposição
  Este metodo tem por objetivo transformar todo o conteudo de uma Array em apenas um elemento.<br>
  Por exemplo:
 
