@@ -3,7 +3,7 @@ Poc de WEB - Media Queries
 
 
 
-<img src="https://github.com/user-attachments/assets/7c8c6b73-9dc0-43da-9847-adf15889f72d](https://www.lambdatest.com/blog/wp-content/uploads/2022/07/Banner20CSS20media20queries.png" width="600px" >
+<img src="https://www.lambdatest.com/blog/wp-content/uploads/2022/07/Banner20CSS20media20queries.png" width="600px" >
 
 # Metodos de Array em JS
 
