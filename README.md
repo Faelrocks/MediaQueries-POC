@@ -186,7 +186,7 @@ body {
 }
  ~~~~
  
-Entretanto, quando alteramos a resolução do dipositivo para dimensões nativas de um iPad Mini ou de um iPhone 14 Pro Max, vemos que o site não fica bem legível, com palavras atravessando containers e mal dimensionamento.
+Entretanto, quando alteramos a resolução do dipositivo para dimensões nativas de um iPad Mini ou de um iPhone 14 Pro Max, vemos que o site não fica bem legível, com palavras atravessando containers e mal dimensionamento.<br>
  
   *iPad Mini <br>
   <img src="/portifolio-ipad-sem-MQ.png" width="320px.png" >
@@ -205,7 +205,7 @@ Entretanto, quando alteramos a resolução do dipositivo para dimensões nativas
  ~~~~
 
  Depois, basta realizar as altracões desejadas.<br>
- Em nosso caso, realizei ajustes no cabeçalho e na apresentação do conteúdo
+ Em nosso caso, realizei ajustes no cabeçalho e na apresentação do conteúdo<br>
 
  ~~~css
   @media (max-width: 1200px) {
@@ -231,11 +231,11 @@ Entretanto, quando alteramos a resolução do dipositivo para dimensões nativas
    *iPad Mini <br>
   <img src="/portifolio-ipad-com-MQ.png" width="320px.png" >
 
- Entretanto, estes ajuste ainda não ficaram perfeitos para usuários de smartphones, veja:
+ Entretanto, estes ajuste ainda não ficaram perfeitos para usuários de smartphones, veja:<br>
    *iPhone 14 Pro Max <br>
   <img src="/portifolio-iphon-sem-MQ.png" width="320px.png" >
 
- Podmos inserir outra Media Querie abaixo da feita anteriormente, desta vez parametrizado para a resolução máxima para 768px:
+ Podmos inserir outra Media Querie abaixo da feita anteriormente, desta vez parametrizado para a resolução máxima para 768px:<br>
  ~~~css
  @media (max-width: 768px) {
     .cabecalho {
