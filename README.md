@@ -186,15 +186,103 @@ body {
 }
  ~~~~
  
- Entretanto, quando alteramos a resolução do dipositivo para dimensões nativas de um iPad Mini ou de um iPhone 14 Pro Max, vemos que o site não fica bem legível, com palavras atravessando containers e mal dimensionamento
-
-  <img src="/portifolio-ipad-sem-MQ" width="600px.png" >
-  <img src="/portifolio-iphone-sem-MQ" width="600px.png" >
+Entretanto, quando alteramos a resolução do dipositivo para dimensões nativas de um iPad Mini ou de um iPhone 14 Pro Max, vemos que o site não fica bem legível, com palavras atravessando containers e mal dimensionamento.
  
- ~~~javascript
- const raizQuadrada = numeros.map(Math.sqrt)
- // raizQuadrada = [2, 3, 4, 5]
+  *iPad Mini <br>
+  <img src="/portifolio-ipad-sem-MQ.png" width="320px.png" >
+
+  *iPhone 14 Pro Max <br>
+  <img src="/portifolio-iphon-sem-MQ.png" width="320px.png" >
+
+ Para resolver este problema, utilizamos a Media Querie. <br>
+ Através dela conseguimos estabelecer quais propriedades serão consideradas até uma dimensão máxima, mínima ou exata.<br>
+ 
+ Que tal ajustarmos o dimensionamento do nosso portifólio para o iPad mini? repare na figura acima que suas dimensões são 768 x 1024.<br>
+ Neste caso, podemos parametrizar para que os valores <b>dentro</b> da Media Querie sejam validos até a resolução 1200px:<br>
+ 
+ ~~~css
+ @media (max-width: 1200px) { }
  ~~~~
+
+ Depois, basta realizar as altracões desejadas.<br>
+ Em nosso caso, realizei ajustes no cabeçalho e na apresentação do conteúdo
+
+ ~~~css
+  @media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;        
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
+ ~~~~
+ Veja o resultado, bem melhor, não?<br>
+   *iPad Mini <br>
+  <img src="/portifolio-ipad-com-MQ.png" width="320px.png" >
+
+ Entretanto, estes ajuste ainda não ficaram perfeitos para usuários de smartphones, veja:
+   *iPhone 14 Pro Max <br>
+  <img src="/portifolio-iphon-sem-MQ.png" width="320px.png" >
+
+ Podmos inserir outra Media Querie abaixo da feita anteriormente, desta vez parametrizado para a resolução máxima para 768px:
+ ~~~css
+ @media (max-width: 768px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 10%;        
+    }
+
+    .apresentacao__conteudo {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .apresentacao__conteudo__titulo {
+        font-size: 1.25rem;
+        font-family: var(--fonte-primaria);
+        text-align: center;
+    }
+
+    .apresentacao__conteudo__texto {
+        font-size: 1.0rem;
+        font-family: var(--fonte-secundaria);
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .apresentacao__links__subtitulo {
+        font-size: 1.25rem;
+        font-family: var(--fonte-primaria);
+        text-align: center;
+    }
+
+    .rodape {
+        font-size: 1.0rem;
+    }
+ }
+ ~~~~
+ Como resultado, temos os textos e foto dimensionados adequadamente aos usuários de Smartphones:<br>
+   *iPhone 14 Pro Max <br>
+ <img src="/portifolio-iphon-com-MQ.png" width="320px.png" >
 
  ## Disposição
  Este metodo tem por objetivo transformar todo o conteudo de uma Array em apenas um elemento.<br>
