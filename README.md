@@ -11,7 +11,7 @@ Poc de WEB - Media Queries
  
  * [Print - apenas impressão](#Print)
  * [Larguras de dispositivos diferentes](#Larguras)
- * [Disposição de dispositivos](#Disposição_de_Dispositivos)
+ * [Disposição de Dispositivos](#Disposição_de_Dispositivos)
  
  <!--te-->
 
