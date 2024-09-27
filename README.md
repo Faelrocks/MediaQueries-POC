@@ -17,37 +17,122 @@ Poc de WEB - Media Queries
 
 
  ## Print
- O operador "spread" do JavaScript ( ...) expande um iterável (como uma matriz) em mais elementos.<br>
- Isso nos permite copiar rapidamente todas as partes de um array existente para outro array:
- ~~~javascript
- const numbersOne = [1, 2, 3];
- const numbersTwo = [4, 5, 6];
- const numbersCombined = [...numbersOne, ...numbersTwo];
- ~~~~
+ O Media Print tem por função adptar o site para que facilite a sua impressão.
 
- O operador "spread" é frequentemente usado para extrair apenas o que é necessário de uma matriz:
- ~~~javascript
- const numbers = [1, 2, 3, 4, 5, 6];
+ podemos observar o nosso site modelo abaixo, nele foi simulado o boletim de um aluno do Mackenzie.
+ 
+![Captura de tela 2024-09-27 134159](https://github.com/user-attachments/assets/806acfcc-8125-41de-8bac-8f3237dd089f)
 
- const [one, two, ...rest] = numbers;
- ~~~~
+O site possui o seguinte css:
 
- Podemos usar o operador "spread" também com objetos:
- ~~~javascript
- const myVehicle = {
-  brand: 'Ford',
-  model: 'Mustang',
-  color: 'red'
+~~~css
+h1{
+    text-align: center;
+    color: white;
 }
 
-const updateMyVehicle = {
-  type: 'car',
-  year: 2021,
-  color: 'yellow'
+body{
+    background-color: rgb(234, 13, 43);
 }
 
-const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
- ~~~~
+p{
+    color: white;
+}
+
+img{
+    height: 200px;
+}
+
+#foto{
+    border: white solid 10px;
+}
+
+#fotos{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    width: 100%;
+    margin-bottom: 8%;
+}
+
+
+#main{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#main > div{
+    width: 50%;
+    align-content: center;
+    text-align: center;
+
+}
+
+#dados{
+    display: flex;
+    flex-direction: column;
+}
+
+#notas{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10%;
+}
+
+.rodape{
+    display: none;
+}
+
+~~~~
+
+Podemos perceber que alguns fatores no site dificultam a sua impressão e levam a um consumo exagerado de tinta, por exemplo, a cor de vermelha de fundo e as imagens presentes no site.
+
+Para auxiliar o usuario podemos utilizar o @media print para realizar algumas alterações apenas quando o usuario for realizar a impressão da pagina.
+
+~~~css
+@media print {
+    
+    body{
+        background-color: white;
+    }
+    
+    p{
+        color:black
+    }
+
+    h1{
+        color:black;
+    }
+
+    img{
+        display: none;
+    }
+
+    #notas{
+        flex-direction: column;
+        margin-top: 0px;
+    }
+
+    .rodape{
+        display:flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+    }
+}
+
+~~~~
+Com essa media querie quando o usuario utilizar o atalho CTRL + P tera o seguinte resultado pra impressão:
+
+![Captura de tela 2024-09-27 134233](https://github.com/user-attachments/assets/ef98c1f2-2a14-453c-b914-413a688452c5)
+
+Podemos observar que as imagens foram removidas da pagina, a cor de fundo foi alterada para branco, foi alterada a cor da fonte de texto, foi reformatada a disposição de dados e adicionamos o nome da universidade ao final do documento facilitando assim a impressão e reduzindo o consumo de tinta pela impressora.
+
+
+
+
+ 
  ## Larguras
  A principal função da Media Querie é adequar o layout do site para dispositivos dos mais variados tamanhos, chamamos isso de "responsividade".
 
