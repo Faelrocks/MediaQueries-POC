@@ -309,7 +309,7 @@ Entretanto, quando alteramos a resolução do dipositivo para dimensões nativas
     }
 }
 ~~~~
-
+<img src="/Imagens Dispositivos/Portrait.jpeg">
  Paisagem: <br>
  A janela de visualização está na orientação paisagem, ou seja, a largura é maior que a altura.
 
@@ -330,5 +330,5 @@ Entretanto, quando alteramos a resolução do dipositivo para dimensões nativas
     }
 }
 ~~~~
-
+<img src="/Imagens Dispositivos/Landscape.jpeg">
  
