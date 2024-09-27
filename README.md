@@ -284,35 +284,51 @@ Entretanto, quando alteramos a resolução do dipositivo para dimensões nativas
    *iPhone 14 Pro Max <br>
  <img src="/portifolio-iphon-com-MQ.png" width="320px.png" >
 
- ## Disposição
- Este metodo tem por objetivo transformar todo o conteudo de uma Array em apenas um elemento.<br>
- Por exemplo:
+ ## Disposição de Dispositivos
+ O recurso de mídia CSS de orientação pode ser usado para testar a orientação da janela de visualização.
 
- Tendo uma lista de numeros como:
- ~~~javascript
- const Numeros = [1, 2, 3];
- ~~~~
+ Valores de palavras-chave:
 
-Podemos utilizar o metodo reduce da seguinte maneira:
-~~~javascript
-const total = Numeros.reduce((total, currentElement) => total + currentElement)
-// Total = 6
-~~~
-sendo,<br>
+ Retrato: <br>
+ A janela de visualização está na orientação retrato, ou seja, a altura é maior ou igual à largura.
 
-~~~javascript
-const total
-~~~
+~~~~css
+@media screen and (orientation: portrait) {
+    body {
+        background-color: #e0f7fa;
+    }
 
-a variavel onde será guardada a array reduzida
+    h1 {
+        font-size: 2.5em;
+        color: #00796b;
+    }
 
-~~~javascript
-(total, currentElement)
-~~~
+    p {
+        font-size: 1.2em;
+        color: #004d40;
+    }
+}
+~~~~
 
-os parâmetros do metodo
+ Paisagem: <br>
+ A janela de visualização está na orientação paisagem, ou seja, a largura é maior que a altura.
 
-~~~javascript
-total + currentElement
-~~~ 
-o modo como sera reduzido, neste caso somando.
+ ~~~~css
+@media screen and (orientation: landscape) {
+    body {
+        background-color: #ffe0b2;
+    }
+
+    h1 {
+        font-size: 3em;
+        color: #e65100;
+    }
+
+    p {
+        font-size: 1.5em;
+        color: #bf360c;
+    }
+}
+~~~~
+
+ 
